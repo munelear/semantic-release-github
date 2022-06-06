@@ -1,5 +1,5 @@
 {
-  "name": "@semantic-release/github",
+  "name": "semantic-release-github",
   "description": "semantic-release plugin to publish a GitHub release and comment on released Pull Requests/Issues",
   "version": "0.0.0-development",
   "author": "Pierre Vanduynslager (https://twitter.com/@pvdlg_)",
@@ -9,7 +9,7 @@
     ]
   },
   "bugs": {
-    "url": "https://github.com/semantic-release/github/issues"
+    "url": "https://github.com/munelear/semantic-release-github/issues"
   },
   "contributors": [
     "Stephan Bönnemann <stephan@boennemann.me> (http://boennemann.me)",
@@ -54,7 +54,7 @@
     "lib",
     "index.js"
   ],
-  "homepage": "https://github.com/semantic-release/github#readme",
+  "homepage": "https://github.com/munelear/semantic-release-github#readme",
   "keywords": [
     "git",
     "github",
@@ -92,7 +92,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/semantic-release/github.git"
+    "url": "https://github.com/munelear/semantic-release-github.git"
   },
   "scripts": {
     "codecov": "codecov -f coverage/coverage-final.json",

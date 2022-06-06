@@ -52,7 +52,7 @@ test.serial('Verify GitHub auth with publish options', async (t) => {
   const repo = 'test_repo';
   const env = {GITHUB_TOKEN: 'github_token'};
   const options = {
-    publish: {path: '@semantic-release/github'},
+    publish: {path: 'semantic-release-github'},
     repositoryUrl: `git+https://othertesturl.com/${owner}/${repo}.git`,
   };
   const github = authenticate(env)
@@ -99,7 +99,7 @@ test.serial('Throw SemanticReleaseError if invalid config', async (t) => {
   const options = {
     publish: [
       {path: '@semantic-release/npm'},
-      {path: '@semantic-release/github', assets, successComment, failComment, failTitle, labels, assignees},
+      {path: 'semantic-release-github', assets, successComment, failComment, failTitle, labels, assignees},
     ],
     repositoryUrl: 'invalid_url',
   };
@@ -357,7 +357,7 @@ test.serial('Verify, release and notify success', async (t) => {
   const assets = ['upload.txt', {path: 'upload_other.txt', name: 'other_file.txt', label: 'Other File'}];
   const failTitle = 'The automated release is failing 🚨';
   const options = {
-    publish: [{path: '@semantic-release/npm'}, {path: '@semantic-release/github', assets}],
+    publish: [{path: '@semantic-release/npm'}, {path: 'semantic-release-github', assets}],
     repositoryUrl: `https://github.com/${owner}/${repo}.git`,
   };
   const nextRelease = {gitTag: 'v1.0.0', name: 'v1.0.0', notes: 'Test release note body'};
@@ -440,7 +440,7 @@ test.serial('Verify, update release and notify success', async (t) => {
   const env = {GITHUB_TOKEN: 'github_token'};
   const failTitle = 'The automated release is failing 🚨';
   const options = {
-    publish: [{path: '@semantic-release/npm'}, {path: '@semantic-release/github'}],
+    publish: [{path: '@semantic-release/npm'}, {path: 'semantic-release-github'}],
     repositoryUrl: `https://github.com/${owner}/${repo}.git`,
   };
   const nextRelease = {gitTag: 'v1.0.0', name: 'v1.0.0', notes: 'Test release note body'};

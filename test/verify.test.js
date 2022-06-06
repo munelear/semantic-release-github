@@ -416,7 +416,7 @@ test.serial('Verify "addReleases" is valid (false)', async (t) => {
   t.true(github.isDone());
 });
 
-// https://github.com/semantic-release/github/issues/182
+// https://github.com/munelear/semantic-release-github/issues/182
 test.serial('Verify if run in GitHub Action', async (t) => {
   const owner = 'test_user';
   const repo = 'test_repo';
@@ -440,7 +440,7 @@ test('Throw SemanticReleaseError for missing github token', async (t) => {
   const [error, ...errors] = await t.throwsAsync(
     verify(
       {},
-      {env: {}, options: {repositoryUrl: 'https://github.com/semantic-release/github.git'}, logger: t.context.logger}
+      {env: {}, options: {repositoryUrl: 'https://github.com/munelear/semantic-release-github.git'}, logger: t.context.logger}
     )
   );
 
@@ -559,7 +559,7 @@ test('Throw SemanticReleaseError if "proxy" option is not a String or an Object'
   const [error, ...errors] = await t.throwsAsync(
     verify(
       {proxy},
-      {env, options: {repositoryUrl: 'https://github.com/semantic-release/github.git'}, logger: t.context.logger}
+      {env, options: {repositoryUrl: 'https://github.com/munelear/semantic-release-github.git'}, logger: t.context.logger}
     )
   );
 
@@ -575,7 +575,7 @@ test('Throw SemanticReleaseError if "proxy" option is an Object with invalid pro
   const [error, ...errors] = await t.throwsAsync(
     verify(
       {proxy},
-      {env, options: {repositoryUrl: 'https://github.com/semantic-release/github.git'}, logger: t.context.logger}
+      {env, options: {repositoryUrl: 'https://github.com/munelear/semantic-release-github.git'}, logger: t.context.logger}
     )
   );
 
